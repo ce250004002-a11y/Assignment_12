@@ -1,0 +1,45 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+class Rectangle{
+    public:
+    double length;
+    double breadth;
+    string unit;
+    
+    Rectangle(){
+        this->length = 1;
+        this->breadth = 1;
+        this->unit = "cm";
+    }
+    Rectangle(double length, double breadth, string unit){
+        this->length = length;
+        this->breadth = breadth;
+        this->unit = unit;
+    }
+    
+    void area(){
+        cout<<"Area of the rectangle : "<<length*breadth<<" sq."<<unit<<endl;
+    }
+    
+};
+
+int main() {
+    Rectangle r2;
+    double length, breadth;
+    string unit;
+    cout<<"Enter the length you want: ";
+    cin>>length;
+    cout<<"Enter the breadth you want: ";
+    cin>>breadth;
+    cout<<"Enter the unit of the dimensions: ";
+    cin>>unit;
+    
+    Rectangle r1(length, breadth, unit);
+    r1.area();
+    r2.area();
+
+    return 0;
+}
